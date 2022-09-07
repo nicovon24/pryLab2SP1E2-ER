@@ -27,35 +27,49 @@ namespace pryEjXRSP1
             string cobraCom = cbCobraCom.Text;
             //flag
             bool flagId = false;
+            char separador = Convert.ToChar(",");
             StreamReader sr = new StreamReader("./vendedor.txt");
             while (!sr.EndOfStream)
             {
-                
+                string[] arrVendedor = sr.ReadLine().Split(separador);
+                int idArr = Convert.ToInt32(arrVendedor[0]);
+                if(idArr == id)
+                {
+                    flagId = true;
+                }
             }
             sr.Close();
             //switch, transforming si and no to 0 and -1
             switch (activo) { case "Si": activo = "0"; break; case "No": activo = "-1"; break; }
             switch (cobraCom) { case "Si": cobraCom = "0"; break; case "No": cobraCom = "-1"; break; }
-            if (id != 0 && nombre != "" && activo!="" && cobraCom!="")
+            if (flagId == false)
             {
-                using (StreamWriter sw = File.AppendText("./vendedor.txt"))
+                if (id != 0 && nombre != "" && activo != "" && cobraCom != "")
                 {
-                    sw.WriteLine(id + "," + nombre + "," + activo + "," + cobraCom);
-                    sw.Close();
+                    using (StreamWriter sw = File.AppendText("./vendedor.txt"))
+                    {
+                        sw.WriteLine(id + "," + nombre + "," + activo + "," + cobraCom);
+                        sw.Close();
+                    }
+                    MessageBox.Show("Added data");
+                    txtNombre.Text = "";
+                    nudID.Value = 0;
+                    cbCobraCom.Text = "";
+                    cbActivo.Text = "";
+                    txtNombre.Focus();
                 }
-                MessageBox.Show("Added data");
-                txtNombre.Text = "";
-                nudID.Value = 0;
-                cbCobraCom.Text = "";
-                cbActivo.Text = "";
-                txtNombre.Focus();
+                else { MessageBox.Show("Uncompleted data!"); }
             }
-            else { MessageBox.Show("Uncompleted data!"); }
+            else
+            {
+                MessageBox.Show("Id repeated!");
+            }
+            
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            File.WriteAllText("./vendedor.txt", "Vendedor\n");
+            File.WriteAllText("./vendedor.txt", "");
             MessageBox.Show("Erased data");
         }
     }

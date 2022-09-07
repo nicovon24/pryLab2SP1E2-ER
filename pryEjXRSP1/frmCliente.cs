@@ -20,26 +20,46 @@ namespace pryEjXRSP1
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            //variables
             int id = Convert.ToInt32(nudID.Text);
             string nombre = txtNombre.Text;
-            if(id!=0 && nombre != "")
+            //flag
+            bool flagId = false;
+            char separador = Convert.ToChar(",");
+            StreamReader sr = new StreamReader("./cliente.txt");
+            while (!sr.EndOfStream)
             {
-                using (StreamWriter sw = File.AppendText("./cliente.txt"))
+                string[] arrVendedor = sr.ReadLine().Split(separador);
+                int idArr = Convert.ToInt32(arrVendedor[0]);
+                if (idArr == id)
                 {
-                    sw.WriteLine(id + "," + nombre);
-                    sw.Close();
+                    flagId = true;
                 }
-                nudID.Focus();
-                nudID.Value = 0;
-                txtNombre.Text = "";
-                MessageBox.Show("Added data");
             }
-            else { MessageBox.Show("Uncompleted data!"); }
+            sr.Close();
+            if (flagId == false)
+            {
+                if (id != 0 && nombre != "")
+                {
+                    using (StreamWriter sw = File.AppendText("./cliente.txt"))
+                    {
+                        sw.WriteLine(id + "," + nombre);
+                        sw.Close();
+                    }
+                    nudID.Focus();
+                    nudID.Value = 0;
+                    txtNombre.Text = "";
+                    MessageBox.Show("Added data");
+                }
+                else { MessageBox.Show("Uncompleted data!"); }
+            }
+            else { MessageBox.Show("Id repeated!"); }
+            
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            File.WriteAllText("./cliente.txt", "Cliente\n");
+            File.WriteAllText("./cliente.txt", "");
             MessageBox.Show("Erased data");
         }
     }
