@@ -28,6 +28,11 @@ namespace pryEjXRSP1
             //flag
             bool flagId = false;
             StreamReader sr = new StreamReader("./vendedor.txt");
+            while (!sr.EndOfStream)
+            {
+                
+            }
+            sr.Close();
             //switch, transforming si and no to 0 and -1
             switch (activo) { case "Si": activo = "0"; break; case "No": activo = "-1"; break; }
             switch (cobraCom) { case "Si": cobraCom = "0"; break; case "No": cobraCom = "-1"; break; }
