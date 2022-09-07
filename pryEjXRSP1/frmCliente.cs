@@ -26,22 +26,24 @@ namespace pryEjXRSP1
             //flag
             bool flagId = false;
             char separador = Convert.ToChar(",");
-            StreamReader sr = new StreamReader("./cliente.txt");
-            while (!sr.EndOfStream)
+            StreamWriter sr = new StreamWriter("./clientes.txt", true);
+            sr.Close();
+            StreamReader sr2 = new StreamReader("./clientes.txt");
+            while (!sr2.EndOfStream)
             {
-                string[] arrVendedor = sr.ReadLine().Split(separador);
+                string[] arrVendedor = sr2.ReadLine().Split(separador);
                 int idArr = Convert.ToInt32(arrVendedor[0]);
                 if (idArr == id)
                 {
                     flagId = true;
                 }
             }
-            sr.Close();
+            sr2.Close();
             if (flagId == false)
             {
                 if (id != 0 && nombre != "")
                 {
-                    using (StreamWriter sw = File.AppendText("./cliente.txt"))
+                    using (StreamWriter sw = File.AppendText("./clientes.txt"))
                     {
                         sw.WriteLine(id + "," + nombre);
                         sw.Close();

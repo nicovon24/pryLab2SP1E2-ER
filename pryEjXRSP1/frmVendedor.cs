@@ -28,17 +28,19 @@ namespace pryEjXRSP1
             //flag
             bool flagId = false;
             char separador = Convert.ToChar(",");
-            StreamReader sr = new StreamReader("./vendedor.txt");
-            while (!sr.EndOfStream)
+            StreamWriter sr = new StreamWriter("./vendedor.txt", true);
+            sr.Close();
+            StreamReader sr2 = new StreamReader("./vendedor.txt");
+            while (!sr2.EndOfStream)
             {
-                string[] arrVendedor = sr.ReadLine().Split(separador);
+                string[] arrVendedor = sr2.ReadLine().Split(separador);
                 int idArr = Convert.ToInt32(arrVendedor[0]);
                 if(idArr == id)
                 {
                     flagId = true;
                 }
             }
-            sr.Close();
+            sr2.Close();
             //switch, transforming si and no to 0 and -1
             switch (activo) { case "Si": activo = "0"; break; case "No": activo = "-1"; break; }
             switch (cobraCom) { case "Si": cobraCom = "0"; break; case "No": cobraCom = "-1"; break; }
