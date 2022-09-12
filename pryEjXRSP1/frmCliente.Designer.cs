@@ -28,88 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.nudID = new System.Windows.Forms.NumericUpDown();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnBorrar2 = new System.Windows.Forms.Button();
+            this.btnAceptar2 = new System.Windows.Forms.Button();
+            this.txtNombre2 = new System.Windows.Forms.TextBox();
+            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.lblMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(12, 18);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(22, 20);
-            this.lblID.TabIndex = 0;
-            this.lblID.Text = "Id";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 77);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(64, 20);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(107, 70);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(224, 27);
-            this.txtNombre.TabIndex = 3;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // nudID
-            // 
-            this.nudID.Location = new System.Drawing.Point(107, 18);
-            this.nudID.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudID.Name = "nudID";
-            this.nudID.Size = new System.Drawing.Size(224, 27);
-            this.nudID.TabIndex = 4;
-            this.nudID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(237, 127);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
-            this.btnAceptar.TabIndex = 5;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(12, 127);
+            this.btnBorrar.Location = new System.Drawing.Point(12, 115);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(94, 29);
-            this.btnBorrar.TabIndex = 6;
+            this.btnBorrar.TabIndex = 20;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(345, 115);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
+            this.btnAceptar.TabIndex = 19;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(0, 0);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 27);
+            this.txtNombre.TabIndex = 0;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.Location = new System.Drawing.Point(0, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(100, 23);
+            this.lblNombre.TabIndex = 0;
+            // 
+            // btnBorrar2
+            // 
+            this.btnBorrar2.Location = new System.Drawing.Point(151, 182);
+            this.btnBorrar2.Name = "btnBorrar2";
+            this.btnBorrar2.Size = new System.Drawing.Size(94, 29);
+            this.btnBorrar2.TabIndex = 20;
+            this.btnBorrar2.Text = "Borrar";
+            this.btnBorrar2.UseVisualStyleBackColor = true;
+            this.btnBorrar2.Click += new System.EventHandler(this.btnBorrar2_Click);
+            // 
+            // btnAceptar2
+            // 
+            this.btnAceptar2.Location = new System.Drawing.Point(326, 182);
+            this.btnAceptar2.Name = "btnAceptar2";
+            this.btnAceptar2.Size = new System.Drawing.Size(94, 29);
+            this.btnAceptar2.TabIndex = 19;
+            this.btnAceptar2.Text = "Aceptar";
+            this.btnAceptar2.UseVisualStyleBackColor = true;
+            this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
+            // 
+            // txtNombre2
+            // 
+            this.txtNombre2.Location = new System.Drawing.Point(151, 103);
+            this.txtNombre2.Name = "txtNombre2";
+            this.txtNombre2.Size = new System.Drawing.Size(269, 27);
+            this.txtNombre2.TabIndex = 18;
+            this.txtNombre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblNombre2
+            // 
+            this.lblNombre2.AutoSize = true;
+            this.lblNombre2.Location = new System.Drawing.Point(12, 106);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(64, 20);
+            this.lblNombre2.TabIndex = 17;
+            this.lblNombre2.Text = "Nombre";
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMsg.Location = new System.Drawing.Point(13, 21);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(407, 55);
+            this.lblMsg.TabIndex = 33;
+            this.lblMsg.Text = "El id del cliente se generara automaticamente, sumando\r\nuno con respecto al anter" +
+    "ior registro\r\n\r\n";
             // 
             // frmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 182);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.nudID);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblID);
+            this.ClientSize = new System.Drawing.Size(439, 241);
+            this.Controls.Add(this.lblMsg);
+            this.Controls.Add(this.btnBorrar2);
+            this.Controls.Add(this.btnAceptar2);
+            this.Controls.Add(this.txtNombre2);
+            this.Controls.Add(this.lblNombre2);
             this.Name = "frmCliente";
-            this.Text = "Formulario cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,11 +134,14 @@
 
         #endregion
 
-        private Label lblID;
-        private Label lblNombre;
-        private TextBox txtNombre;
-        private NumericUpDown nudID;
-        private Button btnAceptar;
         private Button btnBorrar;
+        private Button btnAceptar;
+        private TextBox txtNombre;
+        private Label lblNombre;
+        private Button btnBorrar2;
+        private Button btnAceptar2;
+        private TextBox txtNombre2;
+        private Label lblNombre2;
+        private Label lblMsg;
     }
 }
