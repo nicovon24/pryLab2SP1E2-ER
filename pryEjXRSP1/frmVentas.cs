@@ -23,7 +23,7 @@ namespace pryEjXRSP1
             while (!srClienteId.EndOfStream)
             {
                 string[] arrCliente = srClienteId.ReadLine().Split(separador);
-                cbClienteId.Items.Add("Cliente " + arrCliente[0]);
+                cbClienteId.Items.Add(arrCliente[1] + " " + arrCliente[0]); //Fer 1 
             }
             srClienteId.Close();
             //vendedor id
@@ -31,7 +31,7 @@ namespace pryEjXRSP1
             while (!srVendedorId.EndOfStream)
             {
                 string[] arrVendedor = srVendedorId.ReadLine().Split(separador);
-                cbVendedorId.Items.Add("Vendedor " + arrVendedor[0]);
+                cbVendedorId.Items.Add(arrVendedor[1] + " " + arrVendedor[0]); //Nico 1
             }
             srVendedorId.Close();
 
