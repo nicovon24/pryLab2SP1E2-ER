@@ -33,10 +33,11 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnBorrar2 = new System.Windows.Forms.Button();
-            this.btnAceptar2 = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.txtNombre2 = new System.Windows.Forms.TextBox();
             this.lblNombre2 = new System.Windows.Forms.Label();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBorrar
@@ -72,7 +73,7 @@
             // 
             // btnBorrar2
             // 
-            this.btnBorrar2.Location = new System.Drawing.Point(151, 182);
+            this.btnBorrar2.Location = new System.Drawing.Point(165, 182);
             this.btnBorrar2.Name = "btnBorrar2";
             this.btnBorrar2.Size = new System.Drawing.Size(94, 29);
             this.btnBorrar2.TabIndex = 20;
@@ -80,15 +81,15 @@
             this.btnBorrar2.UseVisualStyleBackColor = true;
             this.btnBorrar2.Click += new System.EventHandler(this.btnBorrar2_Click);
             // 
-            // btnAceptar2
+            // btnCargar
             // 
-            this.btnAceptar2.Location = new System.Drawing.Point(326, 182);
-            this.btnAceptar2.Name = "btnAceptar2";
-            this.btnAceptar2.Size = new System.Drawing.Size(94, 29);
-            this.btnAceptar2.TabIndex = 19;
-            this.btnAceptar2.Text = "Aceptar";
-            this.btnAceptar2.UseVisualStyleBackColor = true;
-            this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
+            this.btnCargar.Location = new System.Drawing.Point(326, 182);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(94, 29);
+            this.btnCargar.TabIndex = 19;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnAceptar2_Click);
             // 
             // txtNombre2
             // 
@@ -117,15 +118,27 @@
             this.lblMsg.Text = "El id del cliente se generara automaticamente, sumando\r\nuno con respecto al anter" +
     "ior registro\r\n\r\n";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(13, 182);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(94, 29);
+            this.btnVolver.TabIndex = 35;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmCliente
             // 
             this.ClientSize = new System.Drawing.Size(439, 241);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.btnBorrar2);
-            this.Controls.Add(this.btnAceptar2);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtNombre2);
             this.Controls.Add(this.lblNombre2);
             this.Name = "frmCliente";
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,9 +152,10 @@
         private TextBox txtNombre;
         private Label lblNombre;
         private Button btnBorrar2;
-        private Button btnAceptar2;
+        private Button btnCargar;
         private TextBox txtNombre2;
         private Label lblNombre2;
         private Label lblMsg;
+        private Button btnVolver;
     }
 }

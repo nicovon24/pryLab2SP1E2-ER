@@ -23,7 +23,7 @@ namespace pryEjXRSP1
             while (!srClienteId.EndOfStream)
             {
                 string[] arrCliente = srClienteId.ReadLine().Split(separador);
-                cbClienteId.Items.Add(arrCliente[0]);
+                cbClienteId.Items.Add("Cliente " + arrCliente[0]);
             }
             srClienteId.Close();
             //vendedor id
@@ -31,7 +31,7 @@ namespace pryEjXRSP1
             while (!srVendedorId.EndOfStream)
             {
                 string[] arrVendedor = srVendedorId.ReadLine().Split(separador);
-                cbVendedorId.Items.Add(arrVendedor[0]);
+                cbVendedorId.Items.Add("Vendedor " + arrVendedor[0]);
             }
             srVendedorId.Close();
 
@@ -58,7 +58,7 @@ namespace pryEjXRSP1
                 idVentas = Convert.ToInt32(idVentas2) + 1; //takes the last id and sums 1 to it, so each time the user registers data, the id sums +1
             }
             sr2.Close();
-            if (idVendedor!="0" && idCliente!="0" && facturaTipo!="" && facturaNro!=0 && monto!=0)
+            if (idVendedor != "0" && idCliente != "0" && facturaTipo != "" && facturaNro != 0 && monto != 0)
             {
                 using (StreamWriter sw = File.AppendText("./ventas.txt"))
                 {
@@ -66,11 +66,35 @@ namespace pryEjXRSP1
                     sw.Close();
                 }
                 MessageBox.Show("Added data");
+                cbVendedorId.Text = "";
+                cbClienteId.Text = "";
+                cbFactTipo.Text = "";
+                nudFactNum.Value = 0;
+                nudMonto.Value = 0;
+                cbVendedorId.Focus();
             }
             else
             {
                 MessageBox.Show("Uncompleted data!");
             }
+        }
+
+        private void cbClienteId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText("./ventas.txt", "");
+            MessageBox.Show("Erased data");
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal frmNew = new frmPrincipal();
+            frmNew.Show();
         }
     }
 }

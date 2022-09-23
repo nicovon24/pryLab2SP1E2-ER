@@ -19,20 +19,34 @@ namespace pryEjXRSP1
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCliente newFrm = new frmCliente();
             newFrm.Show();
         }
 
         private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmVendedor newFrm = new frmVendedor();
             newFrm.Show();
         }
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmVentas newFrm = new frmVentas();
             newFrm.Show();
+        }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Have a good one!");
+            this.Hide();
         }
     }
 }

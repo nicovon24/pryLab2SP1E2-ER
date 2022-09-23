@@ -32,7 +32,7 @@
             this.lblFactNro = new System.Windows.Forms.Label();
             this.lblFactTipo = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.lblVendId = new System.Windows.Forms.Label();
             this.lblIClienteId = new System.Windows.Forms.Label();
             this.nudFactNum = new System.Windows.Forms.NumericUpDown();
@@ -41,6 +41,7 @@
             this.cbClienteId = new System.Windows.Forms.ComboBox();
             this.cbVendedorId = new System.Windows.Forms.ComboBox();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudFactNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonto)).BeginInit();
             this.SuspendLayout();
@@ -77,22 +78,23 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(41, 460);
+            this.btnBorrar.Location = new System.Drawing.Point(198, 460);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(94, 29);
             this.btnBorrar.TabIndex = 22;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // btnAceptar
+            // btnCargar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(355, 460);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
-            this.btnAceptar.TabIndex = 21;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnCargar.Location = new System.Drawing.Point(355, 460);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(94, 29);
+            this.btnCargar.TabIndex = 21;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblVendId
             // 
@@ -154,6 +156,7 @@
             this.cbClienteId.Name = "cbClienteId";
             this.cbClienteId.Size = new System.Drawing.Size(240, 28);
             this.cbClienteId.TabIndex = 30;
+            this.cbClienteId.SelectedIndexChanged += new System.EventHandler(this.cbClienteId_SelectedIndexChanged);
             // 
             // cbVendedorId
             // 
@@ -173,11 +176,22 @@
             this.lblMsg.Text = "El id de la venta se generara automaticamente, sumando\r\nuno con respecto al anter" +
     "ior registro\r\n\r\n";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(41, 460);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(94, 29);
+            this.btnVolver.TabIndex = 35;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 514);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.cbVendedorId);
             this.Controls.Add(this.cbClienteId);
@@ -188,12 +202,12 @@
             this.Controls.Add(this.lblFactNro);
             this.Controls.Add(this.lblFactTipo);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.lblVendId);
             this.Controls.Add(this.lblIClienteId);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVentas";
-            this.Text = "frmVentas";
+            this.Text = "Ventas";
             ((System.ComponentModel.ISupportInitialize)(this.nudFactNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonto)).EndInit();
             this.ResumeLayout(false);
@@ -207,7 +221,7 @@
         private Label lblFactNro;
         private Label lblFactTipo;
         private Button btnBorrar;
-        private Button btnAceptar;
+        private Button btnCargar;
         private Label lblVendId;
         private Label lblIClienteId;
         private NumericUpDown nudFactNum;
@@ -216,5 +230,6 @@
         private ComboBox cbClienteId;
         private ComboBox cbVendedorId;
         private Label lblMsg;
+        private Button btnVolver;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCobraCom = new System.Windows.Forms.Label();
@@ -37,11 +37,12 @@
             this.cbActivo = new System.Windows.Forms.ComboBox();
             this.cbCobraCom = new System.Windows.Forms.ComboBox();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(34, 331);
+            this.btnBorrar.Location = new System.Drawing.Point(202, 331);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(94, 29);
             this.btnBorrar.TabIndex = 12;
@@ -49,15 +50,15 @@
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // btnAceptar
+            // btnCargar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(348, 331);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
-            this.btnAceptar.TabIndex = 11;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnCargar.Location = new System.Drawing.Point(348, 331);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(94, 29);
+            this.btnCargar.TabIndex = 11;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtNombre
             // 
@@ -126,22 +127,33 @@
             this.lblMsg.Text = "El id del vendedorse generara automaticamente, sumando\r\nuno con respecto al anter" +
     "ior registro\r\n\r\n";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(34, 331);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(94, 29);
+            this.btnVolver.TabIndex = 34;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 395);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.cbCobraCom);
             this.Controls.Add(this.cbActivo);
             this.Controls.Add(this.lblCobraCom);
             this.Controls.Add(this.lblActivo);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmVendedor";
-            this.Text = "frmVendedor";
+            this.Text = "Vendedor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,7 +162,7 @@
         #endregion
 
         private Button btnBorrar;
-        private Button btnAceptar;
+        private Button btnCargar;
         private TextBox txtNombre;
         private Label lblNombre;
         private Label lblCobraCom;
@@ -158,5 +170,6 @@
         private ComboBox cbActivo;
         private ComboBox cbCobraCom;
         private Label lblMsg;
+        private Button btnVolver;
     }
 }

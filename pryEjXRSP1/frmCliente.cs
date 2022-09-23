@@ -60,5 +60,12 @@ namespace pryEjXRSP1
             File.WriteAllText("./cliente.txt", "");
             MessageBox.Show("Erased data");
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal frmNew = new frmPrincipal();
+            frmNew.Show();
+        }
     }
 }
