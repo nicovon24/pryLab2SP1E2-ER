@@ -48,5 +48,16 @@ namespace pryEjXRSP1
             MessageBox.Show("Have a good one!");
             this.Hide();
         }
+
+        private void consultaClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Have a good one!");
+            this.Hide();
+        }
     }
 }
