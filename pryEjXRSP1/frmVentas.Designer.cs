@@ -53,34 +53,36 @@
             "A",
             "B",
             "C"});
-            this.cbFactTipo.Location = new System.Drawing.Point(209, 232);
+            this.cbFactTipo.Location = new System.Drawing.Point(183, 174);
+            this.cbFactTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFactTipo.Name = "cbFactTipo";
-            this.cbFactTipo.Size = new System.Drawing.Size(239, 28);
+            this.cbFactTipo.Size = new System.Drawing.Size(210, 23);
             this.cbFactTipo.TabIndex = 25;
             // 
             // lblFactNro
             // 
             this.lblFactNro.AutoSize = true;
-            this.lblFactNro.Location = new System.Drawing.Point(41, 309);
+            this.lblFactNro.Location = new System.Drawing.Point(36, 232);
             this.lblFactNro.Name = "lblFactNro";
-            this.lblFactNro.Size = new System.Drawing.Size(82, 20);
+            this.lblFactNro.Size = new System.Drawing.Size(67, 15);
             this.lblFactNro.TabIndex = 24;
             this.lblFactNro.Text = "Factura nro";
             // 
             // lblFactTipo
             // 
             this.lblFactTipo.AutoSize = true;
-            this.lblFactTipo.Location = new System.Drawing.Point(41, 234);
+            this.lblFactTipo.Location = new System.Drawing.Point(36, 176);
             this.lblFactTipo.Name = "lblFactTipo";
-            this.lblFactTipo.Size = new System.Drawing.Size(87, 20);
+            this.lblFactTipo.Size = new System.Drawing.Size(70, 15);
             this.lblFactTipo.TabIndex = 23;
             this.lblFactTipo.Text = "Factura tipo";
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(198, 460);
+            this.btnBorrar.Location = new System.Drawing.Point(173, 345);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(94, 29);
+            this.btnBorrar.Size = new System.Drawing.Size(82, 22);
             this.btnBorrar.TabIndex = 22;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -88,9 +90,10 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(355, 460);
+            this.btnCargar.Location = new System.Drawing.Point(311, 345);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(94, 29);
+            this.btnCargar.Size = new System.Drawing.Size(82, 22);
             this.btnCargar.TabIndex = 21;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -99,88 +102,93 @@
             // lblVendId
             // 
             this.lblVendId.AutoSize = true;
-            this.lblVendId.Location = new System.Drawing.Point(41, 169);
+            this.lblVendId.Location = new System.Drawing.Point(36, 127);
             this.lblVendId.Name = "lblVendId";
-            this.lblVendId.Size = new System.Drawing.Size(92, 20);
+            this.lblVendId.Size = new System.Drawing.Size(71, 15);
             this.lblVendId.TabIndex = 18;
             this.lblVendId.Text = "Vendedor ID";
             // 
             // lblIClienteId
             // 
             this.lblIClienteId.AutoSize = true;
-            this.lblIClienteId.Location = new System.Drawing.Point(41, 110);
+            this.lblIClienteId.Location = new System.Drawing.Point(36, 82);
             this.lblIClienteId.Name = "lblIClienteId";
-            this.lblIClienteId.Size = new System.Drawing.Size(74, 20);
+            this.lblIClienteId.Size = new System.Drawing.Size(58, 15);
             this.lblIClienteId.TabIndex = 17;
             this.lblIClienteId.Text = "Cliente ID";
             // 
             // nudFactNum
             // 
-            this.nudFactNum.Location = new System.Drawing.Point(209, 306);
+            this.nudFactNum.Location = new System.Drawing.Point(183, 230);
+            this.nudFactNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudFactNum.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.nudFactNum.Name = "nudFactNum";
-            this.nudFactNum.Size = new System.Drawing.Size(240, 27);
+            this.nudFactNum.Size = new System.Drawing.Size(210, 23);
             this.nudFactNum.TabIndex = 26;
             this.nudFactNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nudMonto
             // 
-            this.nudMonto.Location = new System.Drawing.Point(209, 382);
+            this.nudMonto.Location = new System.Drawing.Point(183, 286);
+            this.nudMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudMonto.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.nudMonto.Name = "nudMonto";
-            this.nudMonto.Size = new System.Drawing.Size(240, 27);
+            this.nudMonto.Size = new System.Drawing.Size(210, 23);
             this.nudMonto.TabIndex = 28;
             this.nudMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblMonto
             // 
             this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(41, 385);
+            this.lblMonto.Location = new System.Drawing.Point(36, 289);
             this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(53, 20);
+            this.lblMonto.Size = new System.Drawing.Size(43, 15);
             this.lblMonto.TabIndex = 29;
             this.lblMonto.Text = "Monto";
             // 
             // cbClienteId
             // 
             this.cbClienteId.FormattingEnabled = true;
-            this.cbClienteId.Location = new System.Drawing.Point(209, 102);
+            this.cbClienteId.Location = new System.Drawing.Point(183, 76);
+            this.cbClienteId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbClienteId.Name = "cbClienteId";
-            this.cbClienteId.Size = new System.Drawing.Size(240, 28);
+            this.cbClienteId.Size = new System.Drawing.Size(210, 23);
             this.cbClienteId.TabIndex = 30;
             this.cbClienteId.SelectedIndexChanged += new System.EventHandler(this.cbClienteId_SelectedIndexChanged);
             // 
             // cbVendedorId
             // 
             this.cbVendedorId.FormattingEnabled = true;
-            this.cbVendedorId.Location = new System.Drawing.Point(209, 166);
+            this.cbVendedorId.Location = new System.Drawing.Point(183, 124);
+            this.cbVendedorId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbVendedorId.Name = "cbVendedorId";
-            this.cbVendedorId.Size = new System.Drawing.Size(240, 28);
+            this.cbVendedorId.Size = new System.Drawing.Size(210, 23);
             this.cbVendedorId.TabIndex = 31;
             // 
             // lblMsg
             // 
             this.lblMsg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMsg.Location = new System.Drawing.Point(41, 21);
+            this.lblMsg.Location = new System.Drawing.Point(36, 16);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(407, 55);
+            this.lblMsg.Size = new System.Drawing.Size(356, 41);
             this.lblMsg.TabIndex = 32;
             this.lblMsg.Text = "El id de la venta se generara automaticamente, sumando\r\nuno con respecto al anter" +
     "ior registro\r\n\r\n";
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(41, 460);
+            this.btnVolver.Location = new System.Drawing.Point(36, 345);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(94, 29);
+            this.btnVolver.Size = new System.Drawing.Size(82, 22);
             this.btnVolver.TabIndex = 35;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -188,9 +196,9 @@
             // 
             // frmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 514);
+            this.ClientSize = new System.Drawing.Size(423, 386);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.cbVendedorId);
@@ -205,9 +213,9 @@
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.lblVendId);
             this.Controls.Add(this.lblIClienteId);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVentas";
             this.Text = "Ventas";
+            this.Load += new System.EventHandler(this.frmVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudFactNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonto)).EndInit();
             this.ResumeLayout(false);

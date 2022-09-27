@@ -59,5 +59,26 @@ namespace pryEjXRSP1
             MessageBox.Show("Have a good one!");
             this.Hide();
         }
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmConsultaCliente newFrm = new frmConsultaCliente();
+            newFrm.Show();
+        }
+
+        private void consultarVendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmConsultaVendedor newFrm = new frmConsultaVendedor();
+            newFrm.Show();
+        }
+
+        private void consultarVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmConsultaVentas newFrm = new frmConsultaVentas();
+            newFrm.Show();
+        }
     }
 }
